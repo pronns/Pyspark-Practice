@@ -1,0 +1,7 @@
+docker stop demo-pyspark   # Stop the running container
+docker rm demo-pyspark
+
+docker ps
+docker run -it --rm -p 8888:8888 -v "F:/CODING/Data Engineering/Pyspark Practice/data:/home/jovyan/work" --name demo-pyspark-new jupyter/pyspark-notebook
+docker exec -it demo-pyspark2 bash
+docker cp data/ 62ab815280ad:/data/
